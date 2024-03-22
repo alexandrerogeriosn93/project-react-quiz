@@ -16,8 +16,9 @@ const quizReducer = (state, action) => {
     case "CHANGE_STATE":
       return { ...state, gameStage: STAGES[1] };
     case "REORDER_QUESTION":
-      const reorderedQuestions = questions.sort(() => Math.random() - 0.5);
-      return { ...state, questions: reorderedQuestions };
+      return { ...state, questions: questions.sort(() => Math.random() - 0.5) };
+    case "CHANGE_QUESTION":
+      return { ...state, currentQuestion: state.currentQuestion + 1 };
     default:
       return state;
   }
