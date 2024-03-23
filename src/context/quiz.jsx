@@ -1,8 +1,8 @@
 /* eslint-disable no-case-declarations */
 import { createContext, useReducer } from "react";
-import questions from "../data/questions";
+import questions from "../data/questions_complete";
 
-const STAGES = ["Start", "Playing", "End"];
+const STAGES = ["Start", "Category", "Playing", "End"];
 
 const initialState = {
   gameStage: STAGES[0],
