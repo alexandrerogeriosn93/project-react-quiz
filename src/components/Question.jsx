@@ -9,13 +9,6 @@ const Question = () => {
   const [quizState, dispatch] = useContext(QuizContext);
   const currentQuestion = quizState.questions[quizState.currentQuestion];
 
-  // const onSelectOption = (option) => {
-  //   dispatch({
-  //     type: "CHECK_ANSWER",
-  //     payload: { answer: currentQuestion.answer, option },
-  //   });
-  // };
-
   const onSelectOption = (option) => {
     dispatch({
       type: "CHECK_ANSWER",
